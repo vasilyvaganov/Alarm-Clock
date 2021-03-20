@@ -15,25 +15,19 @@ class Application(tk.Tk):
 
     def __init__(self):
         tk.Tk.__init__(self)
-        self.geometry('245x160')  # размер
-        self.attributes('-alpha', 1)  # прозрачность
-        #self.attributes('-topmost', True)  # поверх всех окон
-        # self.overrideredirect(True)
-        self.resizable(False, False)  # не разрешать изменять размер
-        self.title('Напоминалка')  # титл
+        self.geometry('245x160')
+        self.attributes('-alpha', 1)
+        self.resizable(False, False)
+        self.title('Напоминалка')
         self.iconbitmap(r'icon//Task Scheduler.ico')
 
-        self.set_ui()  # запуск set_ui
+        self.set_ui()
 
     def set_ui(self):
 
         global hour1
         hour1 = IntVar()
 
-        #self.time2 = ttk.LabelFrame(self)
-        #self.time2.pack(fill=tk.X)
-        #self.time2 = ttk.Label(self,text='Ниже введите нужно вам время',padding=(10,10,10,00))
-        #self.time2.pack()
         self.hour = ttk.LabelFrame(self,padding=(10,0,10,10))
         self.hour.pack(fill=tk.X)
         self.time3 = ttk.Label(self.hour,text='Время:',padding=(-2,10,10,10))
@@ -45,13 +39,13 @@ class Application(tk.Tk):
 
         global minute1
         minute1 = IntVar()
-        #self.minute = ttk.LabelFrame(self,padding=(10,10,10,10))
-        #self.minute.pack(fill=tk.X)
+
         self.minute1 = ttk.Entry(self.hour, width=4,textvariable=minute1)
         self.minute1.pack(side=tk.LEFT)
 
         global comment1
         comment1 = StringVar()
+
         self.comment = ttk.LabelFrame(self, text='Напоминание: ',padding=(5,10,10,0))
         self.comment.pack(fill=tk.X)
         self.comment1 = ttk.Entry(self.comment, width=40,textvariable=comment1)
@@ -78,7 +72,7 @@ class Application(tk.Tk):
     def stop_music(Self):
          winsound.PlaySound('sound//Silent.wav',winsound.SND_PURGE | winsound.SND_ASYNC)
 
-    def app_exit(self):  # команда для работы кнопки "Выход"
+    def app_exit(self):
         self.destroy()
         sys.exit()
 
