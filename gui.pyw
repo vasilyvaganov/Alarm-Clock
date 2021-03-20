@@ -17,7 +17,7 @@ class Application(tk.Tk):
         tk.Tk.__init__(self)
         self.geometry('245x160')  # размер
         self.attributes('-alpha', 1)  # прозрачность
-        self.attributes('-topmost', True)  # поверх всех окон
+        #self.attributes('-topmost', True)  # поверх всех окон
         # self.overrideredirect(True)
         self.resizable(False, False)  # не разрешать изменять размер
         self.title('Напоминалка')  # титл
