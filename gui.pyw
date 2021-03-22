@@ -53,7 +53,7 @@ class Application(tk.Tk):
 
         self.buttons = ttk.LabelFrame(self)
         self.buttons.pack(fill=tk.X)
-        cont_but = ttk.Button(self.buttons, text="Continue",command=self.app_cont,padding=(0,0,0,0)).pack(side=tk.LEFT)
+        cont_but = ttk.Button(self.buttons, text="Start",command=self.app_cont,padding=(0,0,0,0)).pack(side=tk.LEFT)
         stop_music = ttk.Button(self.buttons, text="Stop", command=self.stop_music,padding=(0,0,0,0)).pack(side=tk.LEFT)  # кнопка
         exit_but = ttk.Button(self.buttons, text="Exit", command=self.app_exit,padding=(15,0,0,0)).pack(side=tk.LEFT)
         
